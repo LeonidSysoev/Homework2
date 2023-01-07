@@ -5,6 +5,9 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -74,5 +77,58 @@ public class Main {
         int totalPaintCansBrown = totalClasses * brownPaint;
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalPaintCansWhite +
                 " банок белой краски и " + totalPaintCansBrown + " банок коричневой краски.");
+    }
+    public static void task6() {
+        System.out.println("Задача 6");
+        byte countBananas = 5;
+        byte countMilk = 2;
+        byte countIceCream = 2;
+        byte countEggs = 4;
+        byte weightBananas = 80;
+        byte weightMilk = 105;
+        byte weightIceCream = 100;
+        byte weightEggs = 70;
+        int totalWeightGr = countBananas * weightBananas + countMilk * weightMilk + countIceCream * weightIceCream
+                + countEggs * weightEggs;
+        int grPerKg = 1000;
+        float totalWeightKg = totalWeightGr / (float) grPerKg;
+        System.out.println("Вес спортзавтрака " + totalWeightGr + " граммов");
+        System.out.println("Вес спортзавтрака " + totalWeightKg + " килограммов");
+    }
+    public static void task7() {
+        System.out.println("Задача 7");
+        byte overWeightKg = 7;
+        int grPerKg = 1000;
+        short diet250Gr = 250;
+        short diet500Gr = 500;
+        int overWeightGr = overWeightKg * grPerKg;
+        int weightLoss250Gr = overWeightGr / diet250Gr;
+        int weightLoss500Gr = overWeightGr / diet500Gr;
+        System.out.println("Если спортсмен будет терять по 250 грамм в день, он похудеет за " + weightLoss250Gr
+                + " дней");
+        System.out.println("Если спортсмен будет терять по 500 грамм в день, он похудеет за " + weightLoss500Gr
+                + " дней");
+        int mediumDiet = (diet250Gr + diet500Gr) / 2;
+        float weightLossMedium = overWeightGr / (float)mediumDiet;
+        System.out.println("В среднем спортсмен похудеет за " + weightLossMedium + " дней");
+        }
+    public static void task8() {
+        System.out.println("Задача 8");
+        int currentMashaIncome = 67760;
+        int currentDenisIncome = 83690;
+        int currentKristinaIncome = 76230;
+        float yearBonus = 1.1f;
+        float highMashaIncome = currentMashaIncome * yearBonus;
+        float highDenisIncome = currentDenisIncome * yearBonus;
+        float highKristinaIncome = currentKristinaIncome * yearBonus;
+        float diffMashaIncome = highMashaIncome % currentMashaIncome;
+        System.out.println("Маша теперь получает " + highMashaIncome + " рублей. Годовой доход вырос на "
+                + diffMashaIncome + " рублей.");
+        float diffDenisIncome = highDenisIncome % currentDenisIncome;
+        System.out.println("Денис теперь получает " + highDenisIncome + " рублей. Годовой доход вырос на "
+                + diffDenisIncome + " рублей.");
+        float diffKristinaIncome = highKristinaIncome % currentKristinaIncome;
+        System.out.println("Денис теперь получает " + highKristinaIncome + " рублей. Годовой доход вырос на "
+                + diffKristinaIncome + " рублей.");
     }
 }
